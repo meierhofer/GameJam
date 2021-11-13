@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 public class MainMenu : MonoBehaviour
 {
-    public GameObject pauseMenu, settingsMenu;
-    public GameObject StartButton, SkipButton;
+    public GameObject Start, Skip;
 
     public void PlayGame()
     {
@@ -18,8 +18,8 @@ public class MainMenu : MonoBehaviour
 
     public void QuitGame()
     {
-        Application.Quit();
-        //UnityEditor.EditorApplication.ExitPlaymode(); //exits the playmode in the Editor
-        Application.Quit();  //exit for the build game
+        //Application.Quit();
+        UnityEditor.EditorApplication.ExitPlaymode(); //exits the playmode in the Editor
+        //Application.Quit();  //exit for the build game
     }
 }
