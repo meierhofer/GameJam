@@ -20,9 +20,6 @@ public class DragDropController : MonoBehaviour
     {
         if (isDragged)
         {
-
-        
-
             if(!smartDrag)
             {
                 transform.position = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -41,6 +38,19 @@ public class DragDropController : MonoBehaviour
 
     private void OnMouseOver()
     {
-        
+        if(isDraggable && Input.GetMouseButtonDown(0))
+        {
+            if(smartDrag)
+            {
+                initialPositionMouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                initialPositionObject = transform.position;
+            }
+            isDragged = true;
+        }
+    }
+
+    private void OnMouseUp()
+    {
+        isDragged = false;
     }
 }
