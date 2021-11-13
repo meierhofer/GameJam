@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class MainMenu : MonoBehaviour
+public class MainMenu1 : MonoBehaviour
 {
-    public GameObject Start, Skip1;
+    public GameObject LetsGo, Skip;
 
     public void PlayGame()
     {
