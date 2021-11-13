@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DragDropController : MonoBehaviour
 {
-
+    public float gridSize = 0.5f;
     public bool snapToGrid = true;
     public bool smartDrag = true;
     public bool isDraggable = true;
@@ -31,7 +31,7 @@ public class DragDropController : MonoBehaviour
             if (snapToGrid)
             {
                 //transform.position.x = 1;
-                transform.position = new Vector2(Mathf.RoundToInt(transform.position.x), Mathf.RoundToInt(transform.position.y)) ;
+                transform.position = new Vector2(Mathf.RoundToInt(transform.position.x/gridSize)*gridSize, Mathf.RoundToInt(transform.position.z)/gridSize)*gridSize ;
             }
         }
     }

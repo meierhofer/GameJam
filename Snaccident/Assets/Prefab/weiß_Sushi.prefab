@@ -72,6 +72,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4439802129380231995}
+  - component: {fileID: 7463869360170153633}
   m_Layer: 0
   m_Name: "wei\xDF_Sushi"
   m_TagString: Player
@@ -94,6 +95,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &7463869360170153633
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3223457536260387958}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.03, z: 0.055}
+  m_Center: {x: 0, y: 0, z: -0.009}
 --- !u!1 &4095664371485189153
 GameObject:
   m_ObjectHideFlags: 0
