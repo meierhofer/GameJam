@@ -14,6 +14,8 @@ public class TryAgain : MonoBehaviour
 
 public void QuitGame() 
     {
-        UnityEditor.EditorApplication.ExitPlaymode();
+        Application.Quit();
+        //UnityEditor.EditorApplication.ExitPlaymode(); //exits the playmode in the Editor
+        Application.Quit();  //exit for the build game
     }
 }
