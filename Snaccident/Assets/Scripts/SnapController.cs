@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SnapController : MonoBehaviour
 {
-    public List<Transform> snapPoints;
+    public List<SnapPoint> snapPoints;
     public List<Draggable> draggableObjects;
     public float snapRange = 0.02f;
 
@@ -15,16 +15,17 @@ public class SnapController : MonoBehaviour
         {
             draggable.dragEndedCallback = OnDragEnded;
         }
+        Invoke("CheckSushi", 30f);
     }
 
    private void OnDragEnded(Draggable draggable)
     {
         float closestDistance = -1;
-        Transform closestSnapPoint = null;
+        SnapPoint closestSnapPoint = null;
 
-        foreach(Transform snapPoint in snapPoints)
+        foreach(var snapPoint in snapPoints)
         {
-            float currentDistance = Vector3.Distance(draggable.transform.position, snapPoint.position);
+            float currentDistance = Vector3.Distance(draggable.transform.position, snapPoint.transform.position);
             currentDistance = Mathf.Abs(currentDistance);
             if(closestSnapPoint == null || currentDistance < closestDistance)
             {
@@ -34,7 +35,21 @@ public class SnapController : MonoBehaviour
         }
         if(closestSnapPoint != null && closestDistance <= snapRange)
         {
-            draggable.transform.position = closestSnapPoint.position;
+            draggable.transform.position = closestSnapPoint.transform.position;
+            closestSnapPoint.sushi = draggable;
+        }
+    }
+
+    private void CheckSushi()
+    {
+        
+        foreach(var Sushi in snapPoints)
+        {
+            
+            if(Sushi.CorrectSushi() == false)
+            {
+                //player lost go to trashcan scene
+            }
         }
     }
 
