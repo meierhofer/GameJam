@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class TryAgain : MonoBehaviour
 {
+    public GameObject Again, Quit;
+
     public void PlayGame() 
     {
         SceneManager.LoadScene(2);
