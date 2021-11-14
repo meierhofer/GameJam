@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SnapController : MonoBehaviour
 {
@@ -48,7 +49,11 @@ public class SnapController : MonoBehaviour
             
             if(Sushi.CorrectSushi() == false)
             {
-                //player lost go to trashcan scene
+                SceneManager.LoadScene("FailScene");
+            }
+            else if(Sushi.CorrectSushi() == true)
+            {
+                SceneManager.LoadScene("WinScene");
             }
         }
     }
