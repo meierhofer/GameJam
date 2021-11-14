@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum sushi_type {
-    Avocado, Salmon, Radish
+    Avocado, Salmon, Radish, White, Burger
 }
 
 public class Draggable : MonoBehaviour
