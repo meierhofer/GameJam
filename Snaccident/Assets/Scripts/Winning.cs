@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class TryAgain : MonoBehaviour
+public class Winning : MonoBehaviour
 {
-    public GameObject Again, Quit;
+    public GameObject TryNew, Quitscreen;
 
     public void PlayGame() 
     {
         SceneManager.LoadScene(1);
     }
 
-public void QuitGame() 
+    public void QuitGame() 
     {
         UnityEditor.EditorApplication.ExitPlaymode();
     }
