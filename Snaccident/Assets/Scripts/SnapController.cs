@@ -24,7 +24,7 @@ public class SnapController : MonoBehaviour
 
         foreach(Transform snapPoint in snapPoints)
         {
-            float currentDistance = Vector2.Distance(draggable.transform.position, snapPoint.position);
+            float currentDistance = Vector3.Distance(draggable.transform.position, snapPoint.position);
             currentDistance = Mathf.Abs(currentDistance);
             if(closestSnapPoint == null || currentDistance < closestDistance)
             {
@@ -38,8 +38,5 @@ public class SnapController : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        
-    }
+    
 }

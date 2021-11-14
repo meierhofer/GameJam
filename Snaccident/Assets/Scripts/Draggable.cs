@@ -2,8 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum sushi_type {
+    Avocado, Salmon, Radish
+}
+
 public class Draggable : MonoBehaviour
 {
+    public sushi_type type;
+
     public delegate void DagEndedDelegate(Draggable draggableObject);
 
     public DagEndedDelegate dragEndedCallback;
