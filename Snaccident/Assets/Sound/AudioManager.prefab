@@ -47,7 +47,31 @@ MonoBehaviour:
   sounds:
   - name: BackgroundMusic
     clip: {fileID: 8300000, guid: cdc4ff2bf277d41ae8ab77966c4aeadc, type: 3}
-    volume: 0.3
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: BackgroundMusic
+    clip: {fileID: 8300000, guid: cdc4ff2bf277d41ae8ab77966c4aeadc, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: BackgroundMusic
+    clip: {fileID: 8300000, guid: cdc4ff2bf277d41ae8ab77966c4aeadc, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: BackgroundMusic
+    clip: {fileID: 8300000, guid: cdc4ff2bf277d41ae8ab77966c4aeadc, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: BackgroundMusic
+    clip: {fileID: 8300000, guid: cdc4ff2bf277d41ae8ab77966c4aeadc, type: 3}
+    volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
