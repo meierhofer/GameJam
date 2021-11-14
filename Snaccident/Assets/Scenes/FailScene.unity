@@ -629,6 +629,72 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6309045914247069250, guid: 9c06c4601490a924899562ba6e507ff1, type: 3}
   m_PrefabInstance: {fileID: 426916072}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &443509750
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 443509753}
+  - component: {fileID: 443509752}
+  - component: {fileID: 443509751}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &443509751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443509750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &443509752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443509750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &443509753
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443509750}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &456342100
 GameObject:
   m_ObjectHideFlags: 0
@@ -1410,7 +1476,7 @@ GameObject:
   - component: {fileID: 994324065}
   - component: {fileID: 994324066}
   m_Layer: 5
-  m_Name: MainMenu
+  m_Name: TryAgain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1446,11 +1512,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 994324064}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fe647b39d2ff41f79c473a20b678a4e, type: 3}
+  m_Script: {fileID: 11500000, guid: f55eb344d54334186a3aa0f30e527d84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Start: {fileID: 0}
-  Skip: {fileID: 0}
+  Again: {fileID: 2081916177}
+  Quit: {fileID: 1483000862}
 --- !u!1001 &1035154317
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2065,7 +2131,7 @@ GameObject:
   - component: {fileID: 1483000865}
   - component: {fileID: 1483000864}
   m_Layer: 5
-  m_Name: Skip
+  m_Name: Quit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2136,7 +2202,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 994324066}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_TargetAssemblyTypeName: TryAgain, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
@@ -2577,11 +2643,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2002100661}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fe647b39d2ff41f79c473a20b678a4e, type: 3}
+  m_Script: {fileID: 11500000, guid: f55eb344d54334186a3aa0f30e527d84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Start: {fileID: 2081916177}
-  Skip: {fileID: 1483000862}
+  Again: {fileID: 0}
+  Quit: {fileID: 0}
 --- !u!114 &2002100663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2611,12 +2677,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 800, y: 1445}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.94
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -2679,7 +2745,7 @@ GameObject:
   - component: {fileID: 2081916180}
   - component: {fileID: 2081916179}
   m_Layer: 5
-  m_Name: Start
+  m_Name: Again
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2727,8 +2793,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.94509804, g: 0.81960785, b: 0.43529412, a: 1}
-    m_PressedColor: {r: 1, g: 0.81960785, b: 0.25882354, a: 1}
+    m_HighlightedColor: {r: 0.9490196, g: 0.75686276, b: 0.6745098, a: 1}
+    m_PressedColor: {r: 0.7924528, g: 0.6171413, b: 0.5420078, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -2750,7 +2816,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 994324066}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_TargetAssemblyTypeName: TryAgain, Assembly-CSharp
         m_MethodName: PlayGame
         m_Mode: 1
         m_Arguments:
